@@ -47,7 +47,7 @@ function shorten() {
 function createAnchor(id) {
   let anchor = document.getElementById('url-anchor');
   anchor.href = locationRef.origin + locationRef.pathname + '?u=' + id;
-  anchor.text = locationRef.origin + locationRef.pathname + '?u=' + id;
+  anchor.text = id != undefined ? locationRef.origin + locationRef.pathname + '?u=' + id : '';
 }
 
 const urlAnchor = document.getElementById('url-anchor');
