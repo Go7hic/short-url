@@ -1,0 +1,22 @@
+{
+  "name": "short-url",
+  "version": "1.0.0",
+  "description": "demo: http://dyy.im",
+  "main": "urlShort.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyygtfx/short-url.git"
+  },
+  "author": "Go7hic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dyygtfx/short-url/issues"
+  },
+  "homepage": "https://github.com/dyygtfx/short-url#readme",
+  "dependencies": {
+    "g.css": "^1.0.0"
+  }
+}
