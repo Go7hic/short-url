@@ -4,9 +4,9 @@ const RANGE = 999999
 const locationRef = window.location
 const StorageRef = window.localStorage
 
-const urlForm = document.getElementById('url-form')
-const addrDom = document.getElementById('addr')
-const urlAnchor = document.getElementById('url-anchor')
+const urlForm = document.querySelector('#url-form')
+const addrDom = document.querySelector('#addr')
+const urlAnchor = document.querySelector('.url-anchor')
 
 urlForm.onsubmit = function(event) {
   event.preventDefault()
@@ -46,7 +46,7 @@ function shorten() {
 }
 
 function createAnchor(id) {
-  let anchor = document.getElementById('url-anchor')
+  let anchor = document.querySelector('.url-anchor')
   anchor.href = locationRef.origin + locationRef.pathname + '?u=' + id
   anchor.text = id != undefined ? locationRef.origin + locationRef.pathname + '?u=' + id : ''
 }
