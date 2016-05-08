@@ -47,7 +47,8 @@ function shorten() {
 
 function createAnchor(id) {
   let anchor = document.querySelector('.url-anchor')
-  anchor.href = locationRef.origin + locationRef.pathname + '?u=' + id
+  
+  // anchor.href = locationRef.origin + locationRef.pathname + '?u=' + id
   anchor.text = id != undefined ? locationRef.origin + locationRef.pathname + '?u=' + id : ''
 }
 
