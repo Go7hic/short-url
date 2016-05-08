@@ -48,7 +48,7 @@ function shorten() {
 function createAnchor(id) {
   let anchor = document.querySelector('.url-anchor')
   
-  // anchor.href = locationRef.origin + locationRef.pathname + '?u=' + id
+  anchor.href = locationRef.origin + locationRef.pathname + '?u=' + id
   anchor.text = id != undefined ? locationRef.origin + locationRef.pathname + '?u=' + id : ''
 }
 
@@ -58,9 +58,10 @@ if (locationRef.search !== "") {
 } else {
   shorten()
   createAnchor()
-  urlAnchor.onclick = function red(event) {
-    event.preventDefault()
-    let newId = urlAnchor.href.slice(urlAnchor.href.indexOf('=') + 1)
-    locationRef.replace(StorageRef.getItem(newId))
-  };
+  // urlAnchor.onclick = function (event) {
+  //   event.preventDefault()
+  //   let newId = urlAnchor.href.slice(urlAnchor.href.indexOf('=') + 1)
+  //   locationRef.replace(StorageRef.getItem(newId))
+  // };
+  
 }
