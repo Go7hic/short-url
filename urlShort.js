@@ -13,14 +13,14 @@ urlForm.onsubmit = function(event) {
 };
 
 function redirectWithout() {
-  let raw_id = locationRef.search.slice(locationRef.search.indexOf('=') + 1)
+  const raw_id = locationRef.search.slice(locationRef.search.indexOf('=') + 1)
   locationRef.replace(StorageRef.getItem(raw_id))
 }
 
 function shorten() {
 
-  let url = addrDom.value
-  let pat = /(\w+):\/\/[0-9A-Za-z]+\.\w+/g;
+  const url = addrDom.value
+  const pat = /(\w+):\/\/[0-9A-Za-z]+\.\w+/g;
   if (!pat.test(url) || url === "") {
     return;
   }
@@ -46,7 +46,7 @@ function shorten() {
 }
 
 function createAnchor(id) {
-  let anchor = document.querySelector('.url-anchor')
+  const anchor = document.querySelector('.url-anchor')
   
   anchor.href = locationRef.origin + locationRef.pathname + '?u=' + id
   anchor.text = id != undefined ? locationRef.origin + locationRef.pathname + '?u=' + id : ''
@@ -58,10 +58,4 @@ if (locationRef.search !== "") {
 } else {
   shorten()
   createAnchor()
-  // urlAnchor.onclick = function (event) {
-  //   event.preventDefault()
-  //   let newId = urlAnchor.href.slice(urlAnchor.href.indexOf('=') + 1)
-  //   locationRef.replace(StorageRef.getItem(newId))
-  // };
-  
 }
